@@ -1,0 +1,53 @@
+{% extends 'header.html' %} {% block title %}Chatbot{% endblock %} {% block
+content %}
+<h1 class="text-center mb-4">Chatbot</h1>
+<div class="card mb-4">
+  <div class="card-header bg-info text-white">
+    <h2 class="h5 mb-0">Chatbot</h2>
+  </div>
+  <div class="card-body">
+    <form action="/chat" method="POST" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="context_type" class="form-label">Context Type</label>
+        <select class="form-select" name="context_type" id="context_type">
+          <option value="text" selected>Text Context</option>
+          <option value="file">File Context</option>
+        </select>
+      </div>
+      <div class="mb-3" id="context-text-input">
+        <label for="context_text" class="form-label">Context Text</label>
+        <textarea
+          class="form-control"
+          name="context_text"
+          id="context_text"
+          rows="5"
+          placeholder="Enter context text"
+        ></textarea>
+      </div>
+      <div class="mb-3" id="context-file-input" style="display: none">
+        <label for="pdf_file" class="form-label">PDF File</label>
+        <input
+          type="file"
+          class="form-control"
+          name="pdf_file"
+          id="pdf_file"
+          accept=".pdf"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="question" class="form-label">Question</label>
+        <input
+          type="text"
+          class="form-control"
+          name="question"
+          id="question"
+          placeholder="Enter your question"
+        />
+      </div>
+      <button type="submit" class="btn btn-info">Ask</button>
+    </form>
+  </div>
+</div>
+{% endblock %} {% block scripts %}
+<script src="/static/chat.js"></script>
+{% endblock %}

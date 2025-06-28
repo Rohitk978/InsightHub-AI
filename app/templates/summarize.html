@@ -1,0 +1,58 @@
+{% extends 'header.html' %} {% block title %}Summarize{% endblock %} {% block
+content %}
+<h1 class="text-center mb-4">Summarize</h1>
+<div class="card mb-4">
+  <div class="card-header bg-primary text-white">
+    <h2 class="h5 mb-0">Summarize Content</h2>
+  </div>
+  <div class="card-body">
+    <form action="/summarize" method="POST" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="input_type" class="form-label">Input Type</label>
+        <select class="form-select" name="input_type" id="input_type">
+          <option value="text" selected>Text</option>
+          <option value="url">URL</option>
+          <option value="pdf">PDF</option>
+        </select>
+      </div>
+
+      <div class="mb-3" id="Text-input">
+        <label for="text" class="form-label">Text</label>
+        <textarea
+          class="form-control"
+          name="text"
+          id="text"
+          rows="5"
+          placeholder="Enter text to summarize"
+        ></textarea>
+      </div>
+
+      <div class="mb-3" id="Url-input" style="display: none">
+        <label for="url" class="form-label">URL</label>
+        <input
+          type="url"
+          class="form-control"
+          name="url"
+          id="url"
+          placeholder="Enter URL to summarize"
+        />
+      </div>
+
+      <div class="mb-3" id="file-input" style="display: none">
+        <label for="pdf" class="form-label">PDF File</label>
+        <input
+          type="file"
+          class="form-control"
+          name="pdf"
+          id="pdf"
+          accept=".pdf"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Summarize</button>
+    </form>
+  </div>
+</div>
+{% endblock %} {% block scripts %}
+<script src="/static/summarize.js"></script>
+{% endblock %}

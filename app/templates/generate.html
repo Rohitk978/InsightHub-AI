@@ -1,0 +1,26 @@
+{% extends 'header.html' %} {% block title %}Generate Text{% endblock %} {%
+block content %}
+<h1 class="text-center mb-4">Generate Text</h1>
+<div class="card mb-4">
+  <div class="card-header bg-success text-white">
+    <h2 class="h5 mb-0">Generate Text</h2>
+  </div>
+  <div class="card-body">
+    <form action="/generate" method="POST">
+      <div class="mb-3">
+        <label for="prompt" class="form-label">Prompt</label>
+        <textarea
+          class="form-control"
+          name="prompt"
+          id="prompt"
+          rows="3"
+          placeholder="Enter prompt for text generation"
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">Generate</button>
+    </form>
+  </div>
+</div>
+{% endblock %} {% block scripts %}
+<script src="/static/generate.js"></script>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'header.html' %} {% block title %}Error{% endblock %} {% block
+content %}
+<h1 class="text-center mb-4">Error</h1>
+<div class="card mb-4">
+  <div class="card-header bg-danger text-white">
+    <h2 class="h5 mb-0">An Error Occurred</h2>
+  </div>
+  <div class="card-body">
+    <p class="text-danger">{{ error }}</p>
+    <a href="/chat" class="btn btn-primary">Back to Chat</a>
+  </div>
+</div>
+{% endblock %}
