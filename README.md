@@ -1,79 +1,91 @@
-InsightHub-AI
-Overview
+🤖 InsightHub-AI
 
-AI Hub Models is a collection of transformer-based NLP applications built to showcase the power of modern AI in handling diverse language tasks.
-This project integrates summarization, text generation, and question answering into a single hub, demonstrating real-world usage of Hugging Face Transformers and cutting-edge models.
 
-The system is designed to:
+📌 Overview
 
-Summarize lengthy documents, PDFs, and web content.
+AI Hub Models is a collection of Transformer-powered NLP applications showcasing the use of state-of-the-art models in Summarization, Text Generation, and Question Answering.
 
-Generate context-aware, human-like text.
+This project demonstrates how modern Hugging Face models can be integrated into real-world workflows for research, content creation, and intelligent Q&A.
 
-Answer user queries accurately based on context.
+📄 Summarization → Condenses text, PDFs, and URLs using DistilBART.
 
-Core Functionalities
+✍️ Text Generation → Generates human-like text with GPT-2.
+
+❓ Question Answering (QA) → Answers queries using Meta-LLaMA-3-8B-Instruct.
+
+🏗️ Core Functionalities
 📄 Summarization
 
-Uses DistilBART, a lightweight distilled version of BART.
+Model: DistilBART.
 
-Capable of summarizing PDF files, raw text, and URLs.
+Inputs: Raw text, PDFs, Web URLs.
 
-Produces concise, high-quality summaries while being computationally efficient.
+Output: Concise summaries.
+
+Highlight: Fast, lightweight, and efficient.
 
 ✍️ Text Generation
 
-Powered by GPT-2.
+Model: GPT-2.
 
-Generates coherent, context-aware text given a user prompt.
+Function: Generates context-aware, fluent text.
 
-Useful for creative writing, story generation, blog content, and more.
+Use Cases: Storytelling, blogs, idea generation.
+
+Highlight: Produces creative and coherent completions.
 
 ❓ Question Answering (QA)
 
-Uses Meta-LLaMA-3-8B-Instruct.
+Model: Meta-LLaMA-3-8B-Instruct.
 
-Handles both fact-based and context-driven queries.
+Function: Extracts or generates answers from given context.
 
-Provides accurate and context-sensitive answers for research and knowledge retrieval.
+Applications: Research, study, business insights.
 
-Key Features
+Highlight: Handles factual and contextual queries.
 
-Multi-Task Hub → Summarization, text generation, and QA in one system.
+🌟 Key Features
 
-Scalable → Easily extendable with other transformer models.
+✔️ Unified Hub → Summarization, Generation, QA.
+✔️ Multi-Source Inputs → PDFs, text, URLs.
+✔️ Transformer-powered → Hugging Face models.
+✔️ Efficient & Scalable → Optimized for performance.
+✔️ Extensible → Add more models easily.
 
-Multi-Source Input → Handles plain text, documents (PDFs), and URLs.
+📂 Project Structure
+AI-Hub-Models/
+├── summarization/        # DistilBART summarization
+├── text_generation/      # GPT-2 text generation
+├── qa/                   # LLaMA-3-8B-Instruct QA
+├── requirements.txt      # Dependencies
+└── README.md             # Documentation
 
-Efficient → Uses distilled and optimized models for performance.
+🛠️ Tech Stack
 
+Hugging Face Transformers
 
-Libraries & Models
+PyTorch
 
-Hugging Face Transformers – Core NLP framework.
+DistilBART → Summarization
 
-DistilBART – Efficient summarization model.
+GPT-2 → Text Generation
 
-GPT-2 – Autoregressive text generation model.
+Meta-LLaMA-3-8B-Instruct → QA
 
-Meta-LLaMA-3-8B-Instruct – Advanced LLM for question answering.
+Utilities → pdfplumber, requests, BeautifulSoup (optional for inputs)
 
-PyTorch – Model backend.
+📌 Use Cases
 
-Optional Utilities – pdfplumber, requests, BeautifulSoup (for handling PDFs and URLs).
+🔹 Research paper & report summarization.
 
-Use Cases
+🔹 Content creation (blogs, stories, idea expansion).
 
-Content Summarization → Research papers, reports, blogs, or long documents.
+🔹 Knowledge retrieval & intelligent Q&A.
 
-Content Generation → Storytelling, blog writing, or creative text tasks.
+🙌 Acknowledgments
 
-Knowledge Retrieval → Question answering for study, research, or business intelligence.
+Hugging Face → Pretrained models.
 
-Acknowledgments
+Meta AI → LLaMA family of models.
 
-Hugging Face for providing model access and pipelines.
-
-Meta AI for LLaMA models.
-
-Open-source communities contributing to NLP advancements.
+Open-source communities → Tools & datasets.
